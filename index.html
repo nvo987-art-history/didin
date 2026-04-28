@@ -9,87 +9,96 @@
   <title>did.ai.in | NVO987 Identity Gateway</title>
 
   <!-- SEO -->
-  <meta name="description" content="did.ai.in is a static placeholder endpoint for future DID:web identity infrastructure. Reference node for NVO987 pk and decentralized identity routing.">
-  <meta name="keywords" content="did.ai.in, did:web, decentralized identity, DID, identity gateway, resolver, pk, NVO987, nvo987, identity.nvo987.us, cybersecurity, web3">
+  <meta name="description" content="did.ai.in is a static placeholder endpoint hosted on GitHub Pages for future identity infrastructure, DID:web integrations and NVO987 pk reference.">
+  <meta name="keywords" content="did.ai.in, DID, did:web, decentralized identity, identity gateway, pk, NVO987, nvo987, identity.nvo987.us, cybersecurity, resolver, verifiable credentials, web3">
   <meta name="author" content="contact@nvo987.us">
-  <meta name="robots" content="index,follow">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="color-scheme" content="dark light">
 
   <!-- Canonical -->
   <link rel="canonical" href="https://did.ai.in/">
 
+  <!-- Sitemap -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
   <!-- Open Graph -->
   <meta property="og:site_name" content="did.ai.in">
   <meta property="og:title" content="did.ai.in | NVO987 Identity Gateway">
-  <meta property="og:description" content="Static placeholder endpoint for future identity services. DID:web reference node for identity.nvo987.us (NVO987 pk).">
+  <meta property="og:description" content="Static placeholder endpoint for future identity infrastructure and DID:web integrations. NVO987 pk reference node.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://did.ai.in/">
+  <meta property="og:image" content="https://did.ai.in/assets/avatar.jpg">
+  <meta property="og:image:alt" content="did.ai.in placeholder identity gateway avatar">
+  <meta property="og:locale" content="en_US">
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="did.ai.in | NVO987 Identity Gateway">
-  <meta name="twitter:description" content="Static placeholder endpoint for future identity services. DID:web reference node for NVO987 pk.">
+  <meta name="twitter:description" content="Static placeholder endpoint for future identity infrastructure and DID:web integrations. NVO987 pk reference node.">
+  <meta name="twitter:image" content="https://did.ai.in/assets/avatar.jpg">
 
   <!-- Theme -->
   <meta name="theme-color" content="#060710">
+  <meta name="msapplication-TileColor" content="#060710">
 
   <!-- Icons -->
   <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+  <!-- Preload / Performance -->
+  <link rel="preload" href="/assets/avatar.jpg" as="image">
 
   <!-- Styles -->
   <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "did.ai.in",
+    "url": "https://did.ai.in/",
+    "email": "contact@nvo987.us",
+    "sameAs": [
+      "https://identity.nvo987.us"
+    ],
+    "description": "Static placeholder endpoint for future identity infrastructure and DID:web integrations (NVO987 pk reference)."
+  }
+  </script>
 </head>
 
 <body>
   <header class="topbar">
-    <div class="brand">
-      <span class="brand__dot"></span>
-      <span class="brand__name">did.ai.in</span>
+    <div class="topbar__brand">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span class="topbar__label">ACTIVE DOMAIN</span>
     </div>
 
-    <nav class="nav">
-      <a class="nav__link" href="https://identity.nvo987.us" target="_blank" rel="noopener">
+    <nav class="topbar__nav" aria-label="Primary">
+      <a class="topbar__link" href="https://identity.nvo987.us" target="_blank" rel="noopener">
         identity.nvo987.us
       </a>
     </nav>
   </header>
 
   <main class="container">
-    <section class="hero">
-      <div class="hero__content">
-        <h1 class="hero__title">did.ai.in</h1>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__left">
+        <h1 id="hero-title" class="hero__title">did.ai.in</h1>
 
         <p class="hero__subtitle">
-          Static placeholder endpoint for future identity infrastructure.
+          Placeholder endpoint · GitHub Pages deployment
         </p>
-
-        <div class="hero__meta">
-          <div class="meta">
-            <div class="meta__label">Status</div>
-            <div class="meta__value meta__value--ok">Online</div>
-          </div>
-
-          <div class="meta">
-            <div class="meta__label">Hosting</div>
-            <div class="meta__value">GitHub Pages</div>
-          </div>
-
-          <div class="meta">
-            <div class="meta__label">DNS</div>
-            <div class="meta__value">Dynadot CNAME</div>
-          </div>
-        </div>
 
         <p class="hero__desc">
-          This domain is currently used as a stable landing endpoint. The purpose is to maintain an active domain,
-          provide a consistent reference URL, and support future deployments related to decentralized identity,
-          DID resolution, and verifiable service endpoints.
+          This domain is intentionally maintained as an active static endpoint.
+          It provides a stable reference URL for future deployments related to
+          decentralized identity, DID:web infrastructure, and NVO987 pk-based service integration.
         </p>
 
-        <div class="actions">
+        <div class="hero__actions">
           <a class="btn btn--primary" href="https://identity.nvo987.us" target="_blank" rel="noopener">
             Identity Node
           </a>
@@ -98,74 +107,109 @@
             Contact
           </a>
         </div>
+
+        <dl class="hero__meta">
+          <div class="meta">
+            <dt class="meta__label">Operator</dt>
+            <dd class="meta__value">
+              <a href="mailto:contact@nvo987.us">contact@nvo987.us</a>
+            </dd>
+          </div>
+
+          <div class="meta">
+            <dt class="meta__label">DID</dt>
+            <dd class="meta__value">
+              <a href="https://identity.nvo987.us" target="_blank" rel="noopener">
+                did:web:identity.nvo987.us
+              </a>
+            </dd>
+          </div>
+
+          <div class="meta">
+            <dt class="meta__label">Status</dt>
+            <dd class="meta__value meta__value--ok">Online</dd>
+          </div>
+        </dl>
       </div>
 
-      <div class="hero__panel">
-        <div class="panel">
-          <div class="panel__header">Reference</div>
-
-          <div class="panel__row">
-            <span class="panel__key">DID</span>
-            <a class="panel__value" href="https://identity.nvo987.us" target="_blank" rel="noopener">
-              did:web:identity.nvo987.us
-            </a>
-          </div>
-
-          <div class="panel__row">
-            <span class="panel__key">Endpoint</span>
-            <span class="panel__value">https://did.ai.in</span>
-          </div>
-
-          <div class="panel__row">
-            <span class="panel__key">Contact</span>
-            <a class="panel__value" href="mailto:contact@nvo987.us">
-              contact@nvo987.us
-            </a>
-          </div>
-
-          <div class="panel__note">
-            Placeholder deployment. Services may be added later.
-          </div>
-        </div>
+      <div class="hero__right">
+        <figure class="identity-card">
+          <img class="identity-card__avatar" src="./assets/avatar.jpg" alt="did.ai.in identity avatar">
+          <figcaption class="identity-card__caption">
+            <div class="identity-card__name">did.ai.in</div>
+            <div class="identity-card__sub">static identity placeholder</div>
+            <div class="identity-card__line">
+              <span class="identity-card__key">ref</span>
+              <a class="identity-card__value" href="https://identity.nvo987.us" target="_blank" rel="noopener">
+                identity.nvo987.us
+              </a>
+            </div>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="grid">
+    <section class="grid" aria-labelledby="section-title">
+      <h2 id="section-title" class="section-title">Overview</h2>
+
       <article class="card">
-        <h2 class="card__title">Identity Reference</h2>
+        <h3 class="card__title">Hosting</h3>
         <p class="card__text">
-          A stable DID:web reference is published to support future integrations, verification workflows and service discovery.
+          Static hosting is provided through GitHub Pages. DNS is configured using Dynadot with CNAME mapping.
         </p>
+        <div class="card__tags">
+          <span class="tag">github-pages</span>
+          <span class="tag">cname</span>
+          <span class="tag">dns</span>
+        </div>
       </article>
 
       <article class="card">
-        <h2 class="card__title">Clean Placeholder</h2>
+        <h3 class="card__title">Identity Reference</h3>
         <p class="card__text">
-          The page is intentionally minimal and static. No trackers, no analytics, no dynamic scripts.
+          A DID:web reference is published for future verification workflows and endpoint discovery.
         </p>
+        <div class="card__tags">
+          <span class="tag">did:web</span>
+          <span class="tag">NVO987</span>
+          <span class="tag">pk</span>
+        </div>
       </article>
 
       <article class="card">
-        <h2 class="card__title">Future Deployment</h2>
+        <h3 class="card__title">Future Use</h3>
         <p class="card__text">
-          The endpoint can later host documentation, DID documents, service endpoints or other identity-related infrastructure.
+          This placeholder may later host documentation, DID documents, service metadata, or identity-related services.
         </p>
+        <div class="card__tags">
+          <span class="tag">active</span>
+          <span class="tag">placeholder</span>
+          <span class="tag">infrastructure</span>
+        </div>
       </article>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footer__left">
+    <div class="footer__block">
       <span class="footer__label">contact</span>
       <a href="mailto:contact@nvo987.us">contact@nvo987.us</a>
     </div>
 
-    <div class="footer__right">
+    <div class="footer__block">
       <span class="footer__label">did</span>
       <a href="https://identity.nvo987.us" target="_blank" rel="noopener">
         did:web:identity.nvo987.us
       </a>
     </div>
+
+    <div class="footer__block footer__muted">
+      © <span id="year"></span> did.ai.in
+    </div>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
-</html>
+  </html>

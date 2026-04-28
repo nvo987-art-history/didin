@@ -1,13 +1,10 @@
 # did.ai.in
 
-Static cyberpunk landing page deployed via GitHub Pages.
+Minimal cyberpunk placeholder landing page hosted on GitHub Pages.
 
-## Domain
-did.ai.in
-
-## Operator
+## Contact
 contact@nvo987.us
 
-## DID
+## DID reference
 did:web:identity.nvo987.us  
 https://identity.nvo987.us 

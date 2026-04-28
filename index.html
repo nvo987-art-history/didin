@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Core -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Title -->
+  <title>did.ai.in | Identity Gateway</title>
+
+  <!-- SEO -->
+  <meta name="description" content="did.ai.in - Cyberpunk styled DID:web gateway landing page for identity resolution and endpoint reference." />
+  <meta name="keywords" content="did:web, decentralized identity, did, gateway, resolver, cybersecurity" />
+  <meta name="author" content="contact@nvo987.us" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="did.ai.in | Identity Gateway" />
+  <meta property="og:description" content="Cyberpunk DID:web gateway interface. Operator contact and identity endpoint reference." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://did.ai.in" />
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#05060d" />
+
+  <!-- Icons -->
+  <link rel="icon" type="image/svg+xml" href="./assets/banner.svg" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <div class="noise"></div>
+  <div class="scanlines"></div>
+
+  <header class="topbar">
+    <div class="topbar__left">
+      <span class="topbar__dot"></span>
+      <span class="topbar__label">DID NODE ACTIVE</span>
+    </div>
+
+    <div class="topbar__right">
+      <a href="https://identity.nvo987.us" target="_blank" rel="noopener" class="topbar__link">
+        identity.nvo987.us
+      </a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero__left">
+        <div class="hero__badge">
+          <span class="badge badge--blue">GITHUB-PAGES</span>
+          <span class="badge badge--pink">STATIC</span>
+          <span class="badge badge--purple">TLS</span>
+        </div>
+
+        <h1 class="hero__title glitch" data-text="did.ai.in">
+          did.ai.in
+        </h1>
+
+        <p class="hero__subtitle">
+          decentralized identity gateway / DID:web landing endpoint
+        </p>
+
+        <p class="hero__desc">
+          This domain is deployed as a static identity gateway interface.
+          It is intended to provide a clean reference point for DID:web identity resolution,
+          endpoint discovery, and operator verification. All trust is anchored to DNS ownership
+          and HTTPS transport integrity.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="https://identity.nvo987.us" target="_blank" rel="noopener">
+            OPEN IDENTITY
+          </a>
+
+          <a class="btn btn--ghost" href="mailto:contact@nvo987.us">
+            CONTACT
+          </a>
+        </div>
+
+        <div class="hero__meta">
+          <div class="meta">
+            <div class="meta__label">OPERATOR</div>
+            <div class="meta__value">contact@nvo987.us</div>
+          </div>
+
+          <div class="meta">
+            <div class="meta__label">DID</div>
+            <div class="meta__value">
+              <a href="https://identity.nvo987.us" target="_blank" rel="noopener">
+                did:web:identity.nvo987.us
+              </a>
+            </div>
+          </div>
+
+          <div class="meta">
+            <div class="meta__label">NODE</div>
+            <div class="meta__value">did.ai.in</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__right">
+        <div class="banner">
+          <img src="./assets/banner.svg" alt="did.ai.in banner" />
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <div class="card__head">
+          <span class="card__icon">01</span>
+          <h2 class="card__title">DID:web Resolution</h2>
+        </div>
+        <p class="card__text">
+          DID:web is resolved by deterministic HTTPS fetch.
+          The DID document is derived from the domain name and can expose public keys and service endpoints.
+        </p>
+        <div class="card__tags">
+          <span class="tag">resolver</span>
+          <span class="tag">document</span>
+          <span class="tag">keys</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__head">
+          <span class="card__icon">02</span>
+          <h2 class="card__title">Security Model</h2>
+        </div>
+        <p class="card__text">
+          Trust is anchored in DNS control + TLS certificates.
+          Hardened setups typically include HSTS, strict CSP policies, and minimized service exposure.
+        </p>
+        <div class="card__tags">
+          <span class="tag">tls</span>
+          <span class="tag">dns</span>
+          <span class="tag">csp</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__head">
+          <span class="card__icon">03</span>
+          <h2 class="card__title">Endpoint Expansion</h2>
+        </div>
+        <p class="card__text">
+          The DID document can publish endpoints for credential issuance,
+          authentication, and delegated identity control while staying fully static-hosted.
+        </p>
+        <div class="card__tags">
+          <span class="tag">vc</span>
+          <span class="tag">auth</span>
+          <span class="tag">services</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="terminal">
+      <div class="terminal__bar">
+        <span class="t-dot red"></span>
+        <span class="t-dot yellow"></span>
+        <span class="t-dot green"></span>
+        <span class="terminal__title">node://did.ai.in/log</span>
+      </div>
+
+      <pre class="terminal__body" id="log">
+loading...
+      </pre>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__left">
+      <span class="footer__key">contact</span>
+      <a href="mailto:contact@nvo987.us">contact@nvo987.us</a>
+    </div>
+
+    <div class="footer__right">
+      <span class="footer__key">did</span>
+      <a href="https://identity.nvo987.us" target="_blank" rel="noopener">
+        did:web:identity.nvo987.us
+      </a>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+  </html>

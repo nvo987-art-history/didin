@@ -1,215 +1,359 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Core -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+:root {
+  --bg: #060710;
+  --panel: rgba(14, 16, 30, 0.85);
+  --panel2: rgba(10, 12, 22, 0.92);
 
-  <!-- Title -->
-  <title>did.ai.in | NVO987 Identity Gateway</title>
+  --border: rgba(120, 255, 255, 0.12);
+  --border2: rgba(120, 255, 255, 0.22);
 
-  <!-- SEO -->
-  <meta name="description" content="did.ai.in is a static placeholder endpoint hosted on GitHub Pages for future identity infrastructure, DID:web integrations and NVO987 pk reference.">
-  <meta name="keywords" content="did.ai.in, DID, did:web, decentralized identity, identity gateway, pk, NVO987, nvo987, identity.nvo987.us, cybersecurity, resolver, verifiable credentials, web3">
-  <meta name="author" content="contact@nvo987.us">
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="color-scheme" content="dark light">
+  --text: rgba(236, 252, 255, 0.92);
+  --muted: rgba(236, 252, 255, 0.62);
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://did.ai.in/">
+  --cyan: #3ffcff;
+  --magenta: #ff2bd6;
+  --purple: #8a2bff;
+  --green: #36ff9a;
 
-  <!-- Sitemap -->
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+  --radius: 18px;
+  --radius-lg: 28px;
 
-  <!-- Open Graph -->
-  <meta property="og:site_name" content="did.ai.in">
-  <meta property="og:title" content="did.ai.in | NVO987 Identity Gateway">
-  <meta property="og:description" content="Static placeholder endpoint for future identity infrastructure and DID:web integrations. NVO987 pk reference node.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://did.ai.in/">
-  <meta property="og:image" content="https://did.ai.in/assets/avatar.jpg">
-  <meta property="og:image:alt" content="did.ai.in placeholder identity gateway avatar">
-  <meta property="og:locale" content="en_US">
+  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="did.ai.in | NVO987 Identity Gateway">
-  <meta name="twitter:description" content="Static placeholder endpoint for future identity infrastructure and DID:web integrations. NVO987 pk reference node.">
-  <meta name="twitter:image" content="https://did.ai.in/assets/avatar.jpg">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <!-- Theme -->
-  <meta name="theme-color" content="#060710">
-  <meta name="msapplication-TileColor" content="#060710">
+body {
+  font-family: var(--font);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
 
-  <!-- Icons -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  background:
+    radial-gradient(circle at 20% 10%, rgba(63, 252, 255, 0.10), transparent 55%),
+    radial-gradient(circle at 80% 20%, rgba(255, 43, 214, 0.10), transparent 60%),
+    radial-gradient(circle at 50% 95%, rgba(138, 43, 255, 0.12), transparent 60%),
+    var(--bg);
+}
 
-  <!-- Preload / Performance -->
-  <link rel="preload" href="/assets/avatar.jpg" as="image">
+a {
+  color: var(--cyan);
+  font-weight: 850;
+  text-decoration: none;
+}
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="./css/style.css">
+a:hover {
+  text-decoration: underline;
+}
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "did.ai.in",
-    "url": "https://did.ai.in/",
-    "email": "contact@nvo987.us",
-    "sameAs": [
-      "https://identity.nvo987.us"
-    ],
-    "description": "Static placeholder endpoint for future identity infrastructure and DID:web integrations (NVO987 pk reference)."
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 34px 20px 60px;
+}
+
+/* TOPBAR */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 22px;
+
+  background: rgba(6, 7, 16, 0.80);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 14px rgba(54, 255, 154, 0.55);
+}
+
+.topbar-label {
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(236, 252, 255, 0.72);
+}
+
+.topbar-link {
+  font-size: 13px;
+  font-weight: 950;
+  color: var(--magenta);
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 18px;
+
+  padding: 30px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+
+  background: linear-gradient(180deg, rgba(14, 16, 30, 0.80), rgba(8, 10, 18, 0.92));
+  box-shadow: 0 0 34px rgba(63, 252, 255, 0.06);
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 1000;
+  letter-spacing: -1px;
+  text-shadow: 0 0 22px rgba(63, 252, 255, 0.12);
+}
+
+.hero-subtitle {
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 950;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(236, 252, 255, 0.58);
+}
+
+.hero-desc {
+  margin-top: 18px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 660px;
+}
+
+.hero-actions {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 18px;
+  border-radius: 14px;
+
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(63, 252, 255, 0.30);
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, rgba(63, 252, 255, 0.16), rgba(138, 43, 255, 0.18));
+  color: rgba(236, 252, 255, 0.92);
+}
+
+.btn-secondary {
+  background: rgba(255, 43, 214, 0.10);
+  color: var(--magenta);
+}
+
+/* META */
+.hero-meta {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.meta {
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(10, 12, 22, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.meta dt {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(236, 252, 255, 0.50);
+  margin-bottom: 6px;
+}
+
+.meta dd {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 850;
+  color: rgba(236, 252, 255, 0.86);
+  word-break: break-word;
+}
+
+.ok {
+  color: var(--green);
+}
+
+/* PROFILE CARD */
+.profile-card {
+  border-radius: 22px;
+  border: 1px solid var(--border2);
+  background: rgba(8, 10, 18, 0.78);
+  overflow: hidden;
+  box-shadow: 0 0 22px rgba(63, 252, 255, 0.06);
+}
+
+.profile-img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.profile-caption {
+  padding: 18px;
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: 1000;
+}
+
+.profile-sub {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(236, 252, 255, 0.55);
+}
+
+.profile-line {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-key {
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(236, 252, 255, 0.50);
+}
+
+.profile-value {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--magenta);
+}
+
+/* GRID */
+.section-title {
+  font-size: 16px;
+  font-weight: 1000;
+  margin: 18px 0 12px;
+}
+
+.grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(10, 12, 22, 0.72);
+  transition: 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 43, 214, 0.18);
+}
+
+.card h3 {
+  font-size: 15px;
+  font-weight: 950;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(236, 252, 255, 0.66);
+}
+
+/* FOOTER */
+.footer {
+  padding: 18px 22px;
+  background: rgba(6, 7, 16, 0.80);
+  backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  font-size: 13px;
+}
+
+.footer-label {
+  color: rgba(236, 252, 255, 0.50);
+  font-weight: 950;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.footer-muted {
+  color: rgba(236, 252, 255, 0.50);
+  font-weight: 800;
+}
+
+/* MOBILE */
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;
   }
-  </script>
-</head>
 
-<body>
-  <header class="topbar">
-    <div class="topbar__brand">
-      <span class="status-dot" aria-hidden="true"></span>
-      <span class="topbar__label">ACTIVE DOMAIN</span>
-    </div>
+  .hero-title {
+    font-size: 42px;
+  }
 
-    <nav class="topbar__nav" aria-label="Primary">
-      <a class="topbar__link" href="https://identity.nvo987.us" target="_blank" rel="noopener">
-        identity.nvo987.us
-      </a>
-    </nav>
-  </header>
+  .hero-meta {
+    grid-template-columns: 1fr;
+  }
 
-  <main class="container">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__left">
-        <h1 id="hero-title" class="hero__title">did.ai.in</h1>
-
-        <p class="hero__subtitle">
-          Placeholder endpoint · GitHub Pages deployment
-        </p>
-
-        <p class="hero__desc">
-          This domain is intentionally maintained as an active static endpoint.
-          It provides a stable reference URL for future deployments related to
-          decentralized identity, DID:web infrastructure, and NVO987 pk-based service integration.
-        </p>
-
-        <div class="hero__actions">
-          <a class="btn btn--primary" href="https://identity.nvo987.us" target="_blank" rel="noopener">
-            Identity Node
-          </a>
-
-          <a class="btn btn--secondary" href="mailto:contact@nvo987.us">
-            Contact
-          </a>
-        </div>
-
-        <dl class="hero__meta">
-          <div class="meta">
-            <dt class="meta__label">Operator</dt>
-            <dd class="meta__value">
-              <a href="mailto:contact@nvo987.us">contact@nvo987.us</a>
-            </dd>
-          </div>
-
-          <div class="meta">
-            <dt class="meta__label">DID</dt>
-            <dd class="meta__value">
-              <a href="https://identity.nvo987.us" target="_blank" rel="noopener">
-                did:web:identity.nvo987.us
-              </a>
-            </dd>
-          </div>
-
-          <div class="meta">
-            <dt class="meta__label">Status</dt>
-            <dd class="meta__value meta__value--ok">Online</dd>
-          </div>
-        </dl>
-      </div>
-
-      <div class="hero__right">
-        <figure class="identity-card">
-          <img class="identity-card__avatar" src="./assets/avatar.jpg" alt="did.ai.in identity avatar">
-          <figcaption class="identity-card__caption">
-            <div class="identity-card__name">did.ai.in</div>
-            <div class="identity-card__sub">static identity placeholder</div>
-            <div class="identity-card__line">
-              <span class="identity-card__key">ref</span>
-              <a class="identity-card__value" href="https://identity.nvo987.us" target="_blank" rel="noopener">
-                identity.nvo987.us
-              </a>
-            </div>
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="grid" aria-labelledby="section-title">
-      <h2 id="section-title" class="section-title">Overview</h2>
-
-      <article class="card">
-        <h3 class="card__title">Hosting</h3>
-        <p class="card__text">
-          Static hosting is provided through GitHub Pages. DNS is configured using Dynadot with CNAME mapping.
-        </p>
-        <div class="card__tags">
-          <span class="tag">github-pages</span>
-          <span class="tag">cname</span>
-          <span class="tag">dns</span>
-        </div>
-      </article>
-
-      <article class="card">
-        <h3 class="card__title">Identity Reference</h3>
-        <p class="card__text">
-          A DID:web reference is published for future verification workflows and endpoint discovery.
-        </p>
-        <div class="card__tags">
-          <span class="tag">did:web</span>
-          <span class="tag">NVO987</span>
-          <span class="tag">pk</span>
-        </div>
-      </article>
-
-      <article class="card">
-        <h3 class="card__title">Future Use</h3>
-        <p class="card__text">
-          This placeholder may later host documentation, DID documents, service metadata, or identity-related services.
-        </p>
-        <div class="card__tags">
-          <span class="tag">active</span>
-          <span class="tag">placeholder</span>
-          <span class="tag">infrastructure</span>
-        </div>
-      </article>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer__block">
-      <span class="footer__label">contact</span>
-      <a href="mailto:contact@nvo987.us">contact@nvo987.us</a>
-    </div>
-
-    <div class="footer__block">
-      <span class="footer__label">did</span>
-      <a href="https://identity.nvo987.us" target="_blank" rel="noopener">
-        did:web:identity.nvo987.us
-      </a>
-    </div>
-
-    <div class="footer__block footer__muted">
-      © <span id="year"></span> did.ai.in
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-  </html>
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

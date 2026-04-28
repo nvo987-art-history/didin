@@ -23,34 +23,32 @@
 
   <rect width="900" height="520" fill="url(#bg)"/>
 
-  <g opacity="0.22">
-    <path d="M0 100 H900" stroke="#3ffcff" stroke-width="1"/>
-    <path d="M0 150 H900" stroke="#ff2bd6" stroke-width="1"/>
-    <path d="M0 200 H900" stroke="#3ffcff" stroke-width="1"/>
-    <path d="M0 250 H900" stroke="#8a2bff" stroke-width="1"/>
-    <path d="M0 300 H900" stroke="#ff2bd6" stroke-width="1"/>
-    <path d="M0 350 H900" stroke="#3ffcff" stroke-width="1"/>
-    <path d="M0 400 H900" stroke="#8a2bff" stroke-width="1"/>
+  <g opacity="0.20">
+    <path d="M0 120 H900" stroke="#3ffcff" stroke-width="1"/>
+    <path d="M0 180 H900" stroke="#ff2bd6" stroke-width="1"/>
+    <path d="M0 240 H900" stroke="#3ffcff" stroke-width="1"/>
+    <path d="M0 300 H900" stroke="#8a2bff" stroke-width="1"/>
+    <path d="M0 360 H900" stroke="#ff2bd6" stroke-width="1"/>
   </g>
 
   <g filter="url(#glow)">
-    <polygon points="110,80 770,80 840,150 840,370 770,440 110,440 60,370 60,150"
+    <polygon points="110,85 770,85 840,155 840,365 770,435 110,435 60,365 60,155"
       fill="none" stroke="url(#neon)" stroke-width="6"/>
   </g>
 
-  <text x="120" y="220" font-family="monospace" font-size="46" fill="#d8faff" font-weight="bold">
-    DID AI GATEWAY
+  <text x="120" y="220" font-family="monospace" font-size="50" fill="#d8faff" font-weight="bold">
+    did.ai.in
   </text>
 
-  <text x="120" y="275" font-family="monospace" font-size="20" fill="#3ffcff">
-    did.ai.in / identity interface
+  <text x="120" y="280" font-family="monospace" font-size="20" fill="#3ffcff">
+    placeholder landing endpoint
   </text>
 
-  <text x="120" y="335" font-family="monospace" font-size="18" fill="#ff2bd6">
-    did:web:identity.nvo987.us
+  <text x="120" y="340" font-family="monospace" font-size="18" fill="#ff2bd6">
+    identity.nvo987.us
   </text>
 
   <text x="120" y="395" font-family="monospace" font-size="14" fill="#8a2bff">
-    static node | github pages | secure channel
+    static deployment / github pages
   </text>
 </svg>
